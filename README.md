@@ -1,5 +1,5 @@
 # iMentoru-Foundation
-iMentorU Foundation Website — WEDE5020W Part 2
+iMentorU Foundation Website — WEDE5020W 
 Reitumetse Tleane  
 Student number: ST10526207  
 Project overview
