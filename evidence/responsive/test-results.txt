@@ -1,0 +1,5 @@
+Responsive layout evidence
+Desktop: 1440 x 900 pixels - full navigation and two-column hero
+Tablet: 768 x 1024 pixels - menu button and stacked hero
+Mobile: 390 x 844 pixels - open mobile navigation and single-column actions
+CSS breakpoints checked: 850px and 560px
