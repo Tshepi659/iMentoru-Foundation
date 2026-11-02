@@ -1,0 +1,15 @@
+Local Git history included in this submission package
+
+a9d2825 Build five-page iMentorU website structure
+e881341 Add responsive website styling and mobile layouts
+54bd2cf Add accessible navigation and demonstration form behaviour
+6cc859c Add research, sitemap, proposals and wireframes
+c577bcc Document setup, development history and GitHub submission
+e3e5416 Add final rubric checklist and commit evidence
+e86ccc2 Implement Part 2 external CSS and responsive breakpoints
+6a3a5f4 Add responsive images and accessible page structure
+58d5b15 Improve mobile navigation keyboard interaction
+e5218ba Add desktop tablet and mobile layout evidence
+e2b3824 Document Part 2 implementation testing and feedback changes
+
+These commits become visible on GitHub after the included repository is pushed by following GITHUB_SUBMISSION_GUIDE.md.

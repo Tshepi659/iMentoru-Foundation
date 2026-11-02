@@ -1,0 +1,22 @@
+WEDE5020 Part 2 validation report
+Student: Reitumetse Tleane
+Student number: ST10526207
+Date: 25 September 2026
+
+HTML files checked: 5
+External stylesheet linked on every page: PASS
+Broken local links or asset paths: 0
+Duplicate HTML IDs: 0
+Inline style attributes remaining: 0
+Responsive srcset attributes: PASS
+Picture element on home page: PASS
+CSS braces balanced: PASS
+CSS media-query groups: 3
+JavaScript syntax check: PASS
+Responsive PNG and WebP dimensions: PASS
+Git object and history check: PASS
+
+Evidence viewports:
+- Desktop: 1440 by 900 pixels
+- Tablet: 768 by 1024 pixels
+- Mobile: 390 by 844 pixels
