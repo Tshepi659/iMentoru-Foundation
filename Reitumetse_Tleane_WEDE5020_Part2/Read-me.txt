@@ -1,0 +1,163 @@
+iMentorU Foundation Website
+WEDE5020 
+ Reitumetse Tleane (ST10526207).
+This repository contains the updated iMentorU Foundation website for WEDE5020 Part 3. It retains the responsive Part 2 website and adds JavaScript interaction, SEO improvements, a separate enquiry form, an email-ready contact form, an interactive map, a gallery lightbox and dynamic programme search.
+Website pages
+* `index.html` - Home page and organisation overview
+* `about.html` - Organisation history, mission, vision and values
+* `programmes.html` - Six programme areas and short-course information
+* `volunteer.html` - Mentoring, volunteering and partnership information
+* `enquiry.html` - Programme, course, volunteer, sponsor and partnership enquiries
+* `contact.html` - Contact details, support information and general contact form
+Part 1 feedback corrections
+* Added a second proposal for the same organisation.
+* Added desktop and mobile wireframes for both design proposals.
+* Replaced the general budget statement with an itemised first-year estimate.
+* Added meaningful comments throughout the HTML, CSS and JavaScript.
+* Added a complete README, changelog, sitemap and research structure.
+* Created descriptive Git commits and instructions for capturing GitHub evidence.
+Part 2 CSS implementation
+External stylesheet and cascade
+All five HTML pages link to `css/style.css`. Shared variables, typography, navigation, buttons, cards, forms and footer rules are defined once and cascade across the complete website. Page-specific differences use reusable classes instead of duplicate inline styling.
+Base and typography styles
+* A universal reset applies `box-sizing: border-box` and removes inconsistent default spacing.
+* Arial with Helvetica and sans-serif fallbacks provides readable typography.
+* `rem`, `em`, percentages and `clamp()` create scalable text and spacing.
+* A consistent heading scale, line height, letter spacing and colour system is applied.
+Desktop layout and visual styling
+* Flexbox structures the contact bar, navigation and call-to-action groups.
+* CSS Grid structures the hero, cards, statistics, programmes, forms and footer.
+* Named `grid-template-areas` organise the desktop hero layout.
+* Borders, rounded corners, shadows and branded backgrounds establish visual hierarchy.
+* `:hover`, `:focus-visible` and `:active` states support mouse and keyboard interaction.
+Responsive design
+* Desktop: above 850 px, with multi column navigation, hero and content grids.
+* Tablet: 560-850 px, with mobile navigation, a stacked hero and two-column cards.
+* Mobile: below 560 px, with single-column content, full-width buttons and adjusted typography.
+* The navigation button exposes its open state using `aria-expanded`.
+* A skip link and visible keyboard-focus styles improve accessibility.
+Responsive images
+* The organisation logo uses `srcset` and `sizes` at 211 px and 422 px resolutions.
+* The home-page hero uses a `picture` element.
+* WebP sources reduce file size where supported.
+* PNG sources provide a fallback at 480 px and 960 px resolutions.
+* Explicit image dimensions reduce layout movement while pages load.
+Responsive testing evidence
+The layouts were reviewed at the three required screen sizes. Evidence files are stored in `evidence/responsive`.
+Desktop 1440 by 900
+![Desktop responsive layout](evidence/responsive/desktop-1440x900.png)
+Desktop uses a full horizontal navigation menu, a two-column hero and three-column feature cards.
+Tablet 768 by 1024
+![Tablet responsive layout](evidence/responsive/tablet-768x1024.png)
+Tablet replaces the horizontal navigation with a menu button, stacks the hero content and keeps suitable multi-column content where space allows.
+Mobile 390 by 844
+![Mobile responsive layout](evidence/responsive/mobile-390x844.png)
+Mobile uses an open vertical navigation example, single-column content, smaller typography and full-width action buttons.
+Folder structure
+```text
+.
+|-- index.html
+|-- about.html
+|-- programmes.html
+|-- volunteer.html
+|-- enquiry.html
+|-- contact.html
+|-- css/
+|   `-- style.css
+|-- js/
+|   `-- main.js
+|-- robots.txt
+|-- sitemap.xml
+|-- images/
+|   |-- imentoru-foundation-official-logo.png
+|   |-- imentoru-logo-211.png
+|   |-- hero.svg
+|   |-- hero-480.png
+|   |-- hero-960.png
+|   |-- hero-480.webp
+|   `-- hero-960.webp
+|-- docs/
+|   |-- Reitumetse\_Tleane\_iMentorU\_Proposal.docx
+|   `-- sitemap.md
+|-- research/
+|   `-- research\_notes.md
+|-- evidence/
+|   |-- responsive/
+|   |   |-- desktop-1440x900.png
+|   |   |-- tablet-768x1024.png
+|   |   `-- mobile-390x844.png
+|   `-- README.md
+|-- CHANGELOG.md
+|-- PART2\_TESTING.md
+|-- SUBMISSION\_CHECKLIST.md
+|-- GITHUB\_SUBMISSION\_GUIDE.md
+`-- README.md
+```
+
+Part 3 JavaScript and functionality
+* Programme search filters the programme cards as the user types and displays the number of matching results.
+* Accessible accordions reveal FAQ and organisation information without navigating away.
+* The About page image gallery uses a lightbox for enlarged images, with close-button, backdrop and Escape-key support.
+* The Contact page includes an interactive Leaflet/OpenStreetMap map with an approximate marker for the public Pretoria address area.
+* CSS transitions and a short accordion animation provide feedback; reduced-motion preferences are respected.
+Part 3 forms
+* `enquiry.html` collects contact information, enquiry type, programme/area of interest, optional preferred date and details. Its JavaScript validation checks the fields before preparing an email.
+* `contact.html` collects basic contact information, message type, subject and a full message. Its JavaScript validation checks the fields before preparing an email.
+* Both forms compile the submitted values into a `mailto:` draft addressed to `info@imentorufoundation.org.za`. The visitor must review and send the draft in their email application. Because this is a static website, it does not have a backend, database or AJAX endpoint; email delivery is not automatic or guaranteed.
+* The volunteer form is retained as a clearly labelled local classroom demonstration and does not transmit data.
+Part 3 SEO
+* Added page-specific title tags, meta descriptions and keyword metadata.
+* Retained semantic headings, descriptive image alt text, internal links, mobile responsive layouts and optimised responsive WebP/PNG images.
+* Added `robots.txt` and `sitemap.xml`. Replace `YOUR-GITHUB-USERNAME` and `YOUR-REPOSITORY` in both files with the final GitHub Pages address before publishing.
+* Gallery images use lazy loading. The home-page hero retains responsive image sources and high-priority loading.
+* Local SEO information includes the organisation's public Pretoria address and contact details. Off-page SEO (backlinks and social promotion) requires genuine external promotion and cannot be completed from website code alone.
+Part 3 setup and deployment
+1. Replace the GitHub Pages URL placeholders in `robots.txt` and `sitemap.xml` after confirming the repository name.
+2. Commit and push the project to the GitHub repository.
+3. In GitHub, open Settings ? Pages, select Deploy from a branch, choose `main` and `/ (root)`, then save. Alternatively, import the repository into Netlify and publish the project root.
+4. Test every page, form, map, search and gallery on desktop and mobile after deployment. Leaflet and OpenStreetMap tiles require an internet connection.
+5. For real server-side or AJAX form delivery, configure a trusted form service or backend endpoint and update the JavaScript only after the endpoint is available.
+How to run
+1. Download or clone the repository.
+2. Keep all folders and files in their current structure.
+3. Open `index.html` in Chrome, Edge or Firefox.
+4. Use browser developer tools to test desktop, tablet and mobile widths.
+5. Test the navigation, links, forms and responsive images.
+No package installation, web server or database is required.
+Testing completed
+* All six pages link to the same external stylesheet.
+* All navigation links and local asset paths resolve correctly.
+* The layout contains desktop, tablet and mobile breakpoint rules.
+* Responsive `picture`, `srcset` and `sizes` attributes are present.
+* The JavaScript file passes a syntax check.
+* Programme search, accordions, gallery lightbox and Leaflet map are included.
+* Contact and enquiry forms prepare validated email drafts; actual delivery requires the visitor to send the draft.
+* Forms use associated labels, HTML5 constraints, JavaScript validation and accessible status messages.
+* The mobile menu can be opened, closed, dismissed with Escape and used by keyboard.
+* The repository contains no uncommitted Part 2 changes at packaging time.
+Detailed results and browser developer-tool instructions are provided in `PART2\_TESTING.md`.
+Changelog
+All Part 1 feedback corrections and Part 2 additions are recorded in `CHANGELOG.md`.
+References
+Google Search Central (n.d.) SEO Starter Guide. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 30 October 2026).
+Leaflet (2024) Leaflet: an open-source JavaScript library for interactive maps. Available at: https://leafletjs.com/ (Accessed: 30 October 2026).
+MDN Web Docs (n.d.) Client-side form validation. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation (Accessed: 30 October 2026).
+MDN Web Docs (n.d.) HTML forms. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms (Accessed: 30 October 2026).
+OpenStreetMap contributors (n.d.) Copyright and licence. Available at: https://www.openstreetmap.org/copyright (Accessed: 30 October 2026).
+
+iMentorU Foundation (n.d.-a) Home. Available at: https://www.imentorufoundation.org.za/ (Accessed: 20 August 2026).
+iMentorU Foundation (n.d.-b) Our Profile. Available at: https://www.imentorufoundation.org.za/our-profile (Accessed: 20 August 2026).
+iMentorU Foundation (n.d.-c) Our History. Available at: https://www.imentorufoundation.org.za/our-history (Accessed: 20 August 2026).
+iMentorU Foundation (n.d.-d) Get Involved Volunteer With Us. Available at: https://www.imentorufoundation.org.za/volunteer (Accessed: 19 August 2026).
+iMentorU Foundation (n.d.-e) Contact Us Get In Touch. Available at: https://www.imentorufoundation.org.za/contact-us (Accessed: 19 August 2026).
+iMentorU Foundation (n.d.-f) Support Us Sponsor Donate. Available at: https://www.imentorufoundation.org.za/support (Accessed: 19 August 2026).
+iMentorU Foundation (2025) iMentorU Foundation Profile v1.2025. Available at: https://www.imentorufoundation.org.za/docs/profile/iMentorU%20Foundation%20-%20Profile%20v1.2025.pdf (Accessed: 19 August 2026).
+WHATWG (2026) HTML Living Standard. Available at: https://html.spec.whatwg.org/ (Accessed: 25 September 2026).
+World Wide Web Consortium (W3C) (n.d.) Cascading Style Sheets home page. Available at: https://www.w3.org/Style/CSS/ (Accessed: 25 September 2026).
+Academic project notice
+This is a student website project based on publicly available information about the iMentorU Foundation. The forms are demonstrations and do not transmit information to the organisation. Users should verify donation details directly with the organisation before making any payment.
+Author
+Reitumetse Tleane  
+Student number: ST10526207  
+Module: WEDE5020 Web Development 
+
